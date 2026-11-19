@@ -9,7 +9,7 @@ a {
 /* Make the home page links look like buttons */
 .home-button {
   display: inline-block;
-  background-color: #243b64;
+  background-color: #005793;
   color: white;
   padding: 12px 20px;
   margin: 10px 10px 0 0;
@@ -19,5 +19,5 @@ a {
 
 /* Change the button colour when the mouse is over it */
 .home-button:hover {
-  background-color: #36568c;
+  background-color: #004574;
 }
