@@ -6,3 +6,18 @@ body {
 a {
   color: #00B7FF;
 }
+/* Make the home page links look like buttons */
+.home-button {
+  display: inline-block;
+  background-color: #243b64;
+  color: white;
+  padding: 12px 20px;
+  margin: 10px 10px 0 0;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Change the button colour when the mouse is over it */
+.home-button:hover {
+  background-color: #36568c;
+}
