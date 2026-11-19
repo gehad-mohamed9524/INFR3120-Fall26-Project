@@ -1,4 +1,4 @@
-# Study Group Board
+# StudyCircle
 
 A website where students can create study sessions and browse available sessions.
 
