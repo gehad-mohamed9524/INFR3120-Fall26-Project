@@ -9,6 +9,24 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+/* Load environment variables from the .env file */
+require('dotenv').config();
+
+/* Import Mongoose to connect to MongoDB */
+const mongoose = require('mongoose');
+
+/* Connect StudyCircle to the MongoDB Atlas database */
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => {
+    // Connection was successful
+    console.log('MongoDB Atlas connected successfully!');
+  })
+  .catch((err) => {
+    // Display an error if the connection fails
+    console.error('MongoDB connection failed:', err.message);
+  });
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
