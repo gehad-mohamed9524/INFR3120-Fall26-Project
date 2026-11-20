@@ -4,17 +4,34 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
-    <!-- Original team logo -->
-    <img src="/images/logo.png" alt="StudyCircle team logo" width="180">
-        <!-- Website name sent from the home page route -->
-    <h1><%= title %></h1>
+<body class="home-page">
 
-    <!-- Explain what students can do on the website -->
-    <p>Create a study session or find a group to study with.</p>
+  <!-- team logo -->
+  <img src="/images/logo.png"
+       alt="StudyCircle team logo"
+       width="180">
 
-    <!-- Links to the pages our groupmates are building -->
+  <!-- Welcome message and website introduction -->
+  <main class="home-welcome">
+    <h1>Welcome to <%= title %>!</h1>
+
+    <p>
+      Finding people to study with should be easy. StudyCircle helps
+      you connect with other students, review course material,
+      and prepare for exams together.
+    </p>
+
+    <p>
+      Have a study session in mind? Create one and share the course,
+      topic, time, and location. Looking for study partners?
+      Browse the available sessions and contact an organizer
+      to find out more.
+    </p>
+
+    <!-- Links to create and browse study sessions -->
     <a href="/create" class="home-button">Create a Study Session</a>
     <a href="/groups" class="home-button">View Study Groups</a>
-  </body>
+  </main>
+
+</body>
 </html>

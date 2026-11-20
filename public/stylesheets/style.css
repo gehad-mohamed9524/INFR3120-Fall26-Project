@@ -6,6 +6,7 @@ body {
 a {
   color: #00B7FF;
 }
+
 /* Make the home page links look like buttons */
 .home-button {
   display: inline-block;
@@ -20,4 +21,43 @@ a {
 /* Change the button colour when the mouse is over it */
 .home-button:hover {
   background-color: #004574;
+}
+
+/* Centre the home page */
+.home-page {
+  margin: 0;
+  padding: 40px 20px;
+  background-color: white;
+  text-align: center;
+}
+
+/* Style the welcome message box */
+.home-welcome {
+  max-width: 1000px;
+  margin: 25px auto;
+  padding: 35px 25px;
+  background-color: #eef5fa;
+  border-top: 5px solid #f28c28;
+  border-bottom: 5px solid #f28c28;
+  border-radius: 12px;
+}
+
+/* Match the heading to our logo colors */
+.home-welcome h1 {
+  color: #005793;
+  font-size: 32px;
+}
+
+/* Make the welcome message easier to read */
+.home-welcome p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #333333;
+}
+
+/* Style the larger home page buttons */
+.home-welcome .home-button {
+  margin: 12px 6px;
+  padding: 16px 28px;
+  font-size: 18px;
 }
