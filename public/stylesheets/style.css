@@ -143,3 +143,15 @@ a {
     padding: 22px;
   }
 }
+/* Add borders and spacing to the sessions table */
+.session-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.session-table th,
+.session-table td {
+  border: 1px solid #cccccc;
+  padding: 8px;
+  text-align: left;
+}
