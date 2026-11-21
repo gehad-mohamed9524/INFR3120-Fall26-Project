@@ -53,8 +53,20 @@ router.post('/create', async function(req, res) {
 });
 
 
-/* Display the study groups page */
-router.get('/groups', function(req, res) {
-  res.render('groups', { title: 'View Study Groups' });
+/* Retrieve saved sessions and display the study groups page */
+router.get('/groups', async function(req, res, next) {
+  try {
+    // Get all study sessions, showing the newest first
+    const sessions = await StudySession.find().sort({ createdAt: -1 });
+
+    // Pass the sessions to the EJS page
+    res.render('groups', {
+      title: 'View Study Groups',
+      sessions: sessions
+    });
+  } catch (error) {
+    // Pass database errors to the application's error handler
+    next(error);
+  }
 });
 module.exports = router;

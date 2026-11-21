@@ -9,8 +9,35 @@
   <!-- Page title sent from the route -->
   <h1><%= title %></h1>
 
-  <!-- Temporary message until the session list is added -->
-  <p>Available study sessions will be displayed here.</p>
+<!-- Display a message if there are no sessions -->
+<% if (sessions.length === 0) { %>
+  <p>No study sessions available yet.</p>
+<% } else { %>
+
+  <table class="session-table">
+    <tr>
+      <th>Course</th>
+      <th>Topic</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Location</th>
+      <th>Organizer</th>
+    </tr>
+
+    <!-- Repeat a row for each saved session -->
+    <% for (var i = 0; i < sessions.length; i++) { %>
+      <tr>
+        <td><%= sessions[i].course %></td>
+        <td><%= sessions[i].topic %></td>
+        <td><%= sessions[i].date %></td>
+        <td><%= sessions[i].time %></td>
+        <td><%= sessions[i].location %></td>
+        <td><%= sessions[i].organizer %></td>
+      </tr>
+    <% } %>
+  </table>
+
+<% } %>
 
   <!-- Return to the home page -->
   <a href="/" class="home-button">Back to Home</a>
